@@ -18,7 +18,15 @@ namespace var_2
             profOrents.Add(new Technical());      
         }
 
+        private ProfOrent GetProfOrent (TypeProfOrent typeProfOrent  )
+        {
+            return profOrents.Single(x => x.IdProfOrent == (int)typeProfOrent); 
+        }
 
+        public  QuestionsBase GetQuestionsBase (TypeProfOrent typeProfOrent)
+        {
+            return GetProfOrent(typeProfOrent).QuestionsBase.Single(x => x.Id == 1);
+        }
    
     }
       
