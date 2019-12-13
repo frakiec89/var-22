@@ -28,6 +28,15 @@ namespace var_2
             return GetProfOrent(typeProfOrent).QuestionsBase.Single(x => x.Id == 1);
         }
    
+        private int  RandomGeneretic ()
+        {
+            Random random = new Random(DateTime.Today.Second);
+
+
+            return random.Next(0, 1);
+
+        }
+
     }
       
 
